@@ -1,0 +1,41 @@
+{
+  "name": "openclaw-techspec",
+  "version": "0.1.0",
+  "description": "Self-hosted AI assistant with Claude Code CLI integration",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "openclaw": "dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "demo": "npm run build && node dist/demo.js",
+    "demo:gateway": "npm run build && node dist/demo.js gateway",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src --ext .ts",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "ai",
+    "assistant",
+    "claude",
+    "cli"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "fast-check": "^3.15.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.1.0"
+  },
+  "dependencies": {
+    "@types/ws": "^8.18.1",
+    "commander": "^12.0.0",
+    "ws": "^8.19.0",
+    "zod": "^3.22.0"
+  }
+}
